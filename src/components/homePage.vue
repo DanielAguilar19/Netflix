@@ -70,8 +70,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import movies from '../assets/movies.json'
-
+import { storeToRefs } from 'pinia';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
 import TrendingUp from 'vue-material-design-icons/TrendingUp.vue';
@@ -82,9 +81,9 @@ import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 
 import VideoCarousel from './videoCarousel.vue';
 import MovieDetails from './movieDetails.vue';
-
 import { useMovieStore } from '../stores/movies';
-import { storeToRefs } from 'pinia';
+import movies from '../assets/data/movies.json'
+
 const useMovie = useMovieStore()
 const { movie, showFullVideo } = storeToRefs(useMovie)
 
