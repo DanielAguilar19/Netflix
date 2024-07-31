@@ -2,15 +2,21 @@
   <Div id="Cuadrado"> 
   
   <header>
-          <img src="../../assets/Net.png" alt="">
+          <img class="logoHeader" src="../../assets/Net.png" alt="">
   </header>
   
   <section id="Formulario">
       <h1>Iniciar Sesión</h1>
       <input class="botones" type="text" placeholder="Ingrese su correo" id="boxcorreo">
+
       <input class="botones" type="password" placeholder="Ingrese su contraseña" id="boxcontra">
-      <input class="botones" type="button" value="Iniciar Sesión" id="inicio">
+
+      <router-link to="/home">
+        <button class="botones" id="inicio" type="submit">Iniciar Sesión</button>
+      </router-link>
+
       <label class="bottom"><input type="checkbox" name="Check" id="checkbox"> Recordarme</label>
+
      <a href="google.com" class="bottom a links" id="link">¿Necesitas ayuda?</a> 
      <br><br>
   
@@ -35,9 +41,7 @@ export default {
 
 <style>
 *{
-    padding: 0px;
     margin: 0px;
-    font-family: Helvetica,Arial,sans-serif;
 }
 
 body{   
@@ -46,23 +50,23 @@ body{
 
 }
 #Cuadrado{
-    height: 100%;
+    height: 100vh;
 }
 
 div{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-img{
-padding: 10px;
-height: 130px;
+.logoHeader{
+padding-left: 10px;
+height: 14vh;
 }
 
 section{
-    height: 460px;
-    width: 300px;
+    height: 85vh;
+    width: 58vh;
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 30px 60px;
     margin-left: 35%;
@@ -82,7 +86,7 @@ h1{
     box-sizing: border-box;
     font-size: 1rem;
     margin-bottom: 15px; 
-    background-color: rgb(65, 64, 64);
+    background-color: rgba(65, 64, 64,0.7);
     border-radius: 5px;
     border-width: 0;
     color: rgb(209, 209, 209);
@@ -109,7 +113,6 @@ h1{
     font-size: 15px;
 }
 .pie{
-
     color:rgb(97, 97, 97) ;
     font-size: 15px;
     padding-bottom: 10px;

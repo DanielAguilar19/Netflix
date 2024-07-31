@@ -4,9 +4,15 @@ import homePage from '../components/homePage.vue';
 import login from '../views/login/login.vue';
 
 const routes = [
-  { path: '/', 
-    component: homePage,
+  {
+    path: '/',
+    component: login,
     name: 'inicio',
+  },
+  {
+    path: '/home',
+    component: homePage,
+    name: 'home',
   },
 ]
 
