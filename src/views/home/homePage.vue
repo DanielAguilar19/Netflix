@@ -79,10 +79,10 @@ import MovieOutline from 'vue-material-design-icons/MovieOutline.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 
-import VideoCarousel from './videoCarousel.vue';
-import MovieDetails from './movieDetails.vue';
-import { useMovieStore } from '../stores/movies';
-import movies from '../assets/data/movies.json'
+import VideoCarousel from '../../components/videoCarousel.vue';
+import MovieDetails from '../../components/movieDetails.vue';
+import { useMovieStore } from '../../stores/movies';
+import movies from '../../assets/data/movies.json'
 
 const useMovie = useMovieStore()
 const { movie, showFullVideo } = storeToRefs(useMovie)
