@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-[1200px] relative">
+  <div class="min-w-[100%] relative">
     <div class="flex justify-between mr-6">
       <div
         class="flex items-center font-semibold text-white text-2xl cursor-pointer"
@@ -72,9 +72,10 @@ const fullScreenVideo = (index) => {
   currentSlide.value = index;
   setTimeout(() => (showFullVideo.value = true), 500);
 };
+
 </script>
 
-<style>
+<style >
 .carousel__prev,
 .carousel__next,
 .carousel__prev:hover,
