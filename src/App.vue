@@ -1,8 +1,10 @@
 <template>
-  <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
 </template>
 
-<script>
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Navigation } from "vue3-carousel";
+<script setup>
+import homePage from './views/home/homePage.vue';
+import login from './views/login/login.vue';
 </script>

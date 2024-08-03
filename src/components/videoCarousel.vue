@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-[100%] relative">
+  <div class="min-w-[100] relative bg-transparent">
     <div class="flex justify-between mr-6">
       <div
         class="flex items-center font-semibold text-white text-2xl cursor-pointer"
@@ -16,7 +16,7 @@
       :wrap-around="true"
       :transition="500"
       snapAlign="start"
-      class="bg-transparent"
+      class="flex justify-items-start bg-transparent w-[100vw] h-[30vh]"
     >
       <Slide
         v-for="(slide, index) in movies"
@@ -25,7 +25,7 @@
       >
         <div
           @click="fullScreenVideo(index)"
-          class="object-cover h-[100%] hover:brightness-125 cursor-pointer"
+          class="object-cover h-[50vh] hover:brightness-125 cursor-pointer"
           :class="
             (currentSlide !== index
               ? 'border-4 border-transparent'
@@ -35,7 +35,7 @@
         >
           <img
             style="user-select: none"
-            class="pointer-events-none h-[100%] z-[-1]"
+            class="pointer-events-none  z-[-1]"
             :src="'/images/' + slide.name + '.png'"
           />
         </div>
@@ -49,17 +49,18 @@
 
 <script setup>
 import { ref, toRefs } from "vue";
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Navigation } from "vue3-carousel";
-
-import { useMovieStore } from "../stores/movies";
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import { storeToRefs } from "pinia";
+import { useMovieStore } from "../stores/movies";
+import 'vue3-carousel/dist/carousel.css';
 const useMovie = useMovieStore();
 const { movie, showFullVideo } = storeToRefs(useMovie);
+
 
 let currentSlide = ref(0);
 
 const props = defineProps({ category: String, movies: Array });
+
 const { movies, category } = toRefs(props);
 
 const currentSlideObject = (slide, index) => {

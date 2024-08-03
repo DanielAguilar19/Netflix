@@ -1,9 +1,11 @@
-import './style.css';
-import 'animate.css'; 
-import 'vue3-carousel/dist/carousel.css';   
 import { createApp } from 'vue';
+import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import { createPinia } from 'pinia';
-import { Carousel, Slide } from 'vue3-carousel';
+
+import 'vue3-carousel/dist/carousel.css';   
+import 'animate.css'; 
+import './style.css';
+
 import router from './Router/index.js';
 import App from './App.vue';
 
@@ -12,6 +14,7 @@ app.use(router);
 const pinia = createPinia();
 
 app.component('Carousel', Carousel);
+app.component('Navigation', Navigation);
 app.component('Slide', Slide);
 
 app.use(pinia);
