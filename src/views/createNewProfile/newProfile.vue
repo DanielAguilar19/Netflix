@@ -3,11 +3,11 @@
         <h1 class="flex justify-center">Llene sus datos</h1>
         <form class="flex justify-items-center" action="" method="post">
             <div class="w-80vw">
-                <FloatLabel class="mt-5">
+                <FloatLabel class="mt-10">
                     <AutoComplete v-model="value" inputId="ac" :suggestions="items" @complete="search" />
                     <label for="ac">Ingrese su nombre</label>
                 </FloatLabel>
-                <FloatLabel class="mt-5">
+                <FloatLabel class="mt-10">
                     <AutoComplete v-model="value" inputId="ac" :suggestions="items" @complete="search" />
                     <label for="ac">Ingrese su Apellido</label>
                 </FloatLabel>
