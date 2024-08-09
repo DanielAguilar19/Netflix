@@ -16,7 +16,7 @@
       :wrap-around="true"
       :transition="500"
       snapAlign="start"
-      class="flex justify-items-start bg-transparent w-[100vw] h-[30vh]"
+      class="m-0 bg-transparent w-[90vw] h-[30vh]"
     >
       <Slide
         v-for="(slide, index) in movies"
