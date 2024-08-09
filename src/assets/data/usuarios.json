@@ -1,0 +1,12 @@
+[
+    {
+        "nombre":"Daniel",
+        "apellido":"Aguilar",
+        "perfil":"../Avatar_1.png"
+    },
+    {
+        "nombre":"Valeria",
+        "apellido":"Ramos",
+        "perfil":"../Avatar_2.png"
+    }
+]

@@ -11,7 +11,7 @@
 
       <input class="botones" type="password" placeholder="Ingrese su contraseña" id="boxcontra">
 
-      <router-link to="/home">
+      <router-link to="/profiles">
         <button class="botones" id="inicio" type="submit">Iniciar Sesión</button>
       </router-link>
 
