@@ -2,7 +2,8 @@ import { createApp } from 'vue';
 import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import { createPinia } from 'pinia';
 
-import 'vue3-carousel/dist/carousel.css';   
+import 'vue3-carousel/dist/carousel.css'; 
+import 'primeicons/primeicons.css';
 import 'animate.css'; 
 import './style.css';
 

@@ -7,27 +7,27 @@
       class="flex z-40 items-center w-[3vw] h-screen bg-black relative"
     >
       <img
-        class="absolute top-0 w-[35px] mt-10 ml-10"
+        class="absolute top-0 w-[30px] mt-10 ml-10"
         src="/images/netflix-logo.png"
         alt=""
       />
       <div>
-        <div class="py-2 mx-10 my-6">
+        <div id="iconoSideBar"  class="py-2 mx-10 my-7">
           <Magnify fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div class="py-2 mx-10 my-6 border-b-4 border-b-red-500">
+        <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <HomeOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div class="py-2 mx-10 my-6">
+        <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <TrendingUp fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div class="py-2 mx-10 my-6">
+        <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <Television fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div class="py-2 mx-10 my-6">
+        <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <MovieOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div class="py-2 mx-10 my-6">
+        <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <Plus fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
       </div>
@@ -35,10 +35,10 @@
 
     <div v-if="!showFullVideo">
       <div
-        class="fixed flex z-10 top-0 left-0 w-[100vw] h-[30vh] bg-black pl-[120px] bg-clip-border"
+        class="fixed flex z-20 top-0 left-0 w-[100vw] h-[30vh] bg-black pl-[120px] bg-clip-border"
       >
         <div
-          class="absolute z-30 h-[80vh] left-[120px] w-[99.9vw] right-0 top-0 bg-gradient-to-r from-black via-black"
+          class="absolute z-30 h-[80vh] left-[120px] w-[100vw] right-0 top-0 bg-gradient-to-r from-black via-black"
         />
 
         <MovieDetails class="h-[50vh]" v-if="movie" :movie="movie" />
@@ -126,7 +126,21 @@ let video = ref(null);
 onMounted(() => {
   setTimeout(() => (movie.value = movies[0][0]), 100);
 });
+
+function cambiarIcono(){
+  
+}
 </script>
 
 <style lang="scss">
+
+#iconoSideBar:hover{
+  border-bottom-width: 4px;
+  border-bottom-color: rgb(239 68 68 / 1)
+}
+
+.claseIconoSideBar{
+  border-bottom-width: 4px;
+  border-bottom-color: rgb(239 68 68 / 1)
+}
 </style>

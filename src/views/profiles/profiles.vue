@@ -2,9 +2,9 @@
     <div class="w-full h-screen bg-black flex flex-col items-center justify-center text-white">
       <h1 class="text-3xl mb-15">Who's watching?</h1>
       <div class="flex space-x-8">
-        <router-link  to="/home">
-          <button v-for="usuario in usuarios" :key="usuario.nombre">
-          <img :src="getProfileImage(usuario.perfil)" alt="Profile Image" class="flex align-middle w-32 h-32 rounded-lg mb-2 mr-5"/>
+        <router-link to="/home">
+          <button  v-for="usuario in usuarios" :key="usuario.nombre">
+          <img :src="getProfileImage(usuario.perfil)" alt="Profile Image" class="flex justify-items-center w-32 h-32 rounded-lg mb-2"/>
           <label>{{ usuario.nombre }}</label>
         </button>
         </router-link>
