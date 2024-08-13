@@ -5,7 +5,7 @@
         <router-link to="/home">
           <button  v-for="usuario in usuarios" :key="usuario.nombre">
           <img :src="getProfileImage(usuario.perfil)" alt="Profile Image" class="flex justify-items-center w-32 h-32 rounded-lg mb-2"/>
-          <label>{{ usuario.nombre }}</label>
+          <label id="iconoPerfil">{{ usuario.nombre }}</label>
         </button>
         </router-link>
         <div class="flex flex-col items-center">
@@ -40,3 +40,10 @@ const getProfileImage = (imageName) => {
   return new URL(`/src/assets/${imageName}`, import.meta.url).href;
 };
 </script>
+
+<style scoped>
+#iconoPerfil{
+  display: flex;
+  justify-content: center;
+}
+</style>

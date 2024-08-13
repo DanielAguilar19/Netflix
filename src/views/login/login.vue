@@ -17,11 +17,13 @@
 
       <label class="bottom"><input type="checkbox" name="Check" id="checkbox"> Recordarme</label>
 
-     <a href="google.com" class="bottom a links" id="link">¿Necesitas ayuda?</a> 
+     <a href="/new/user" class="bottom a links" id="link">¿Necesitas ayuda?</a> 
      <br><br>
   
      <label class="pie">¿Primera vez en Netflix?</label> 
-     <a href="google.com" class="pie a links" id="link2">Subscribete Ahora</a> 
+     <routter-link to="/new/user">
+         <a href="/new/user" class="pie a links" id="link2">Subscribete Ahora</a> 
+     </routter-link>
      
      <br><br>
      <p class="pie">
