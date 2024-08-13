@@ -1,6 +1,8 @@
 <template>
     <div class="p-10 w-full h-screen bg-black text-white">
-        <Button icon="pi-chevron-left" severity="secondary" rounded aria-label="Filter" />
+        <router-link to="/profiles">
+            <Button icon="pi-angle-left" severity="secondary" rounded aria-label="Filter"/>
+        </router-link>
         <h1 class="flex justify-center">Llene sus datos</h1>
         <form action="" method="post">
             <div class="w-80vw">
@@ -16,7 +18,9 @@
                     <AutoComplete v-model="perfil" inputId="ac" />
                     <label for="ac">Eliga su perfil</label>
                 </FloatLabel>
-                <Button class="mt-10" label="Enviar" severity="danger" raised/>
+                <router-link to="/profiles">
+                    <Button class="mt-10" label="Enviar" severity="danger" raised/>
+                </router-link>
             </div>
         </form>
     </div>

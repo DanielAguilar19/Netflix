@@ -1,7 +1,9 @@
 <template>
     <div class="w-full h-screen bg-black flex flex-col items-center justify-center text-white">
         <form @submit.prevent="handleSubmit" class="block bg-gray-950 p-8 rounded-lg shadow-lg w-[35vw] h-[85vh] overflow-y-scroll">
-            <Button class="flex justify-self-start" icon="pi-chevron-left" severity="secondary" rounded aria-label="Filter" />
+            <router-link to="/">
+                <Button class="flex justify-self-start" icon="pi-chevron-left" severity="secondary" rounded aria-label="Filter" />
+            </router-link>
             <h1 class="text-3xl text-white font-bold mb-6 text-center">Nuevo Usuario</h1>
   
         <div class="mb-9">
@@ -57,9 +59,11 @@
             <label for="password">Ubicación</label>
           </FloatLabel>
         </div>
-  
+        
         <div class="text-center">
-          <Button severity="danger" label="Crear Usuario" type="submit" class="w-full p-button-lg" />
+            <router-link to ="/">
+                <Button severity="danger" label="Crear Usuario" type="submit" class="w-full p-button-lg" />
+            </router-link>
         </div>
       </form>
     </div>
