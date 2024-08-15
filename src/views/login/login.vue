@@ -7,13 +7,11 @@
   
   <section id="Formulario">
       <h1>Iniciar Sesión</h1>
-      <input class="botones" type="text" placeholder="Ingrese su correo" id="boxcorreo">
+      <input v-model="email" class="botones" type="text" placeholder="Ingrese su correo" id="boxcorreo">
 
-      <input class="botones" type="password" placeholder="Ingrese su contraseña" id="boxcontra">
+      <input v-model="password" class="botones" type="password" placeholder="Ingrese su contraseña" id="boxcontra">
 
-      <router-link to="/profiles">
-        <button class="botones" id="inicio" type="submit">Iniciar Sesión</button>
-      </router-link>
+      <button @click="handleLogin()" class="botones" id="inicio" type="submit">Iniciar Sesión</button>
 
       <label class="bottom"><input type="checkbox" name="Check" id="checkbox"> Recordarme</label>
 
@@ -35,10 +33,22 @@
   </Div>
 </template>
 
-<script>
-export default {
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { login } from '../../Services/AuthServices';
 
-}
+const router = useRouter();
+const email = ref<string>('');
+const password = ref<string>('');
+
+const handleLogin = (): void => {
+  if (login(email.value, password.value)) {
+    router.push('/profiles');
+  } else {
+    alert('Credenciales inválidas');
+  }
+};
 </script>
 
 <style>

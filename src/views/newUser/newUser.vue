@@ -55,7 +55,7 @@
   
         <div class="mb-9">
           <FloatLabel>
-            <InputText id="password" v-model="formData.id_locacion" type="password" class="w-full" />
+            <InputText id="password" v-model="formData.id_locacion" class="w-full" />
             <label for="password">Ubicación</label>
           </FloatLabel>
         </div>
