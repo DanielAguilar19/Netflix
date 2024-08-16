@@ -11,26 +11,7 @@
         src="/images/netflix-logo.png"
         alt=""
       />
-      <div>
-        <div id="iconoSideBar"  class="py-2 mx-10 my-7">
-          <Magnify fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
-          <HomeOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
-          <TrendingUp fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
-          <Television fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
-          <MovieOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
-          <Plus fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-      </div>
+      <sideBar></sideBar>
     </div>
 
     <div v-if="!showFullVideo">
@@ -114,6 +95,7 @@ import Plus from "vue-material-design-icons/Plus.vue";
 import ChevronLeft from "vue-material-design-icons/ChevronLeft.vue";
 
 import { useMovieStore } from "../../stores/movies";
+import sideBar from "../../components/sideBar.vue";
 import VideoCarousel from "../../components/videoCarousel.vue";
 import MovieDetails from "../../components/movieDetails.vue";
 import movies from "../../assets/data/movies.json";

@@ -37,18 +37,18 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { login } from '../../Services/AuthServices';
+import { show_alerta } from '../../utils/alertas';
 
 const router = useRouter();
 const email = ref<string>('');
 const password = ref<string>('');
 
 const handleLogin = (): void => {
-  if (login(email.value, password.value)) {
-    router.push('/profiles');
-  } else {
-    alert('Credenciales inválidas');
+  if (!login(email.value, password.value, router)) {
+    show_alerta('Credenciales Incorrectas','success');
   }
 };
+
 </script>
 
 <style>

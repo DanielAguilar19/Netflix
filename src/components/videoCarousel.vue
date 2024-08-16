@@ -1,43 +1,21 @@
 <template>
   <div class="min-w-[100] relative bg-transparent">
     <div class="flex justify-between mr-6">
-      <div
-        class="flex items-center font-semibold text-white text-2xl cursor-pointer"
-      >
+      <div class="flex items-center font-semibold text-white text-2xl cursor-pointer">
         {{ category }}
       </div>
     </div>
 
-    <Carousel
-      ref="carousel"
-      v-model="currentSlide"
-      :items-to-show="8"
-      :items-to-scroll="1"
-      :wrap-around="true"
-      :transition="500"
-      snapAlign="start"
-      class="m-0 bg-transparent w-[90vw] h-[30vh]"
-    >
-      <Slide
-        v-for="(slide, index) in movies"
-        :key="slide"
-        class="flex items-center object-cover text-white bg-transparent"
-      >
-        <div
-          @click="fullScreenVideo(index)"
-          class="object-cover h-[50vh] hover:brightness-125 cursor-pointer"
-          :class="
-            (currentSlide !== index
-              ? 'border-4 border-transparent'
-              : 'border-4 border-white',
+    <Carousel ref="carousel" v-model="currentSlide" :items-to-show="8" :items-to-scroll="1" :wrap-around="true"
+      :transition="500" snapAlign="start" class="m-0 bg-transparent w-[90vw] h-[30vh]">
+      <Slide v-for="(slide, index) in movies" :key="slide"
+        class="flex items-center object-cover text-white bg-transparent">
+        <div @click="fullScreenVideo(index)" class="object-cover h-[50vh] hover:brightness-125 cursor-pointer" :class="(currentSlide !== index
+            ? 'border-4 border-transparent'
+            : 'border-4 border-white',
             currentSlideObject(slide, index))
-          "
-        >
-          <img
-            style="user-select: none"
-            class="pointer-events-none  z-[-1]"
-            :src="'/images/' + slide.name + '.png'"
-          />
+          ">
+          <img style="user-select: none" class="pointer-events-none  z-[-1]" :src="'/images/' + slide.name + '.png'" />
         </div>
       </Slide>
       <template #addons>
@@ -76,7 +54,7 @@ const fullScreenVideo = (index) => {
 
 </script>
 
-<style >
+<style>
 .carousel__prev,
 .carousel__next,
 .carousel__prev:hover,

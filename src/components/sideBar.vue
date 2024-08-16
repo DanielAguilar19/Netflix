@@ -3,18 +3,24 @@
         <div id="iconoSideBar"  class="py-2 mx-10 my-7">
           <Magnify fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
+        <router-link to = "/home">
+          <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <HomeOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
+        </router-link>
         <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <TrendingUp fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
+        <router-link to ="/home/series">
+          <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <Television fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
-        <div id="iconoSideBar" class="py-2 mx-10 my-7">
+          </div>
+        </router-link>
+        <router-link to ="/home/movies">
+          <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <MovieOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-        </div>
+          </div>
+        </router-link>
         <div id="iconoSideBar" class="py-2 mx-10 my-7">
           <Plus fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
         </div>
