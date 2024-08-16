@@ -12,14 +12,14 @@ import AdminHome from '../views/adminHome/adminHome.vue';
 import adminOperationMovie from '../views/adminOperation/adminOperationMovie.vue';
 import adminOperationSerie from '../views/adminOperation/adminOperationSerie.vue';
 import adminOperationUser from '../views/adminOperation/adminOperationUser.vue';
+
+
 const routes: Array<RouteRecordRaw> = [
   //RUTAS PARA EL USUARIO
   { path: '/', name: 'login', component: login },
-  { path: '/new/user', name: 'nuevoUsuario', component: NewUser },
+  { path: '/new/user', name: 'nuevoUsuario', component: NewUser,},
   {
-    path: '/profiles',
-    name: 'perfiles',
-    component: Profiles,
+    path: '/profiles', name: 'perfiles', component: Profiles,
     beforeEnter: (to, from, next) => {
       if (isAuthenticated()) {
         next();
@@ -28,15 +28,79 @@ const routes: Array<RouteRecordRaw> = [
       }
     },
   },
-  { path: '/new/profile', name: 'nuevoPerfil', component: NewProfile },
-  { path: '/home', name: 'inicio', component: homePage },
-  { path: '/home/series', name: 'series', component: HomeSeriePage },
-  { path: '/home/movies', name: 'peliculas', component: HomeMoviePage },
+  { path: '/new/profile', name: 'nuevoPerfil', component: NewProfile,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+   },
+  { path: '/home', name: 'inicio', component: homePage ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {  path: '/home/series', name: 'series', component: HomeSeriePage ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  }, 
+  { path: '/home/movies', name: 'peliculas', component: HomeMoviePage ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  }, 
   //RUTAS PARA EL ADMIN
-  {path: '/admin/home', name: 'homeAdmin', component: AdminHome },
-  {path: '/admin/operation/movies', name: 'adminMovie', component: adminOperationMovie },
-  {path: '/admin/operation/series', name: 'adminMSerie', component: adminOperationSerie },
-  {path: '/admin/operation/user', name: 'adminUser', component: adminOperationUser },
+  {path: '/admin/home', name: 'homeAdmin', component: AdminHome ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  }, 
+  {path: '/admin/operation/movies', name: 'adminMovie', component: adminOperationMovie  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/admin/operation/series', name: 'adminMSerie', component: adminOperationSerie  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/admin/operation/user', name: 'adminUser', component: adminOperationUser  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
 ];
 
 const router = createRouter({

@@ -1,12 +1,24 @@
 [
     {
-        "nombre":"Daniel",
-        "apellido":"Aguilar",
-        "perfil":"../Avatar_1.png"
+      "email": "user@hola.com",
+      "password": "user",
+      "role": "subscriber",
+      "profiles": [
+        {
+          "nombre": "Daniel",
+          "apellido": "Aguilar",
+          "perfil": "../Avatar_1.png"
+        },
+        {
+          "nombre": "Valeria",
+          "apellido": "Ramos",
+          "perfil": "../Avatar_2.png"
+        }
+      ]
     },
     {
-        "nombre":"Valeria",
-        "apellido":"Ramos",
-        "perfil":"../Avatar_2.png"
+      "email": "admin@hola.com",
+      "password": "admin",
+      "role": "admin"
     }
-]
+  ]

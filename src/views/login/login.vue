@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { login } from '../../Services/AuthServices';
+import { currentUser, login } from '../../Services/AuthServices';
 import { show_alerta } from '../../utils/alertas';
 
 const router = useRouter();
@@ -45,8 +45,12 @@ const password = ref<string>('');
 
 const handleLogin = (): void => {
   if (!login(email.value, password.value, router)) {
-    show_alerta('Credenciales Incorrectas','success');
+    show_alerta('Ingrese Credenciales Validas','error');
+  }else if (login(email.value, password.value, router)) {
+    show_alerta('Bienvenido','success');
+    console.log(currentUser.value);
   }
+
 };
 
 </script>
