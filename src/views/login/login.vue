@@ -1,36 +1,37 @@
-<template>  
-  <Div id="Cuadrado"> 
-  
-  <header>
-          <img class="logoHeader" src="../../assets/Net.png" alt="">
-  </header>
-  
-  <section id="Formulario">
-      <h1>Iniciar Sesión</h1>
-      <input v-model="email" class="botones" type="text" placeholder="Ingrese su correo" id="boxcorreo">
+<template>
+    <Div id="Cuadrado">
 
-      <input v-model="password" class="botones" type="password" placeholder="Ingrese su contraseña" id="boxcontra">
+        <header>
+            <img class="logoHeader" src="../../assets/Net.png" alt="">
+        </header>
 
-      <button @click="handleLogin()" class="botones" id="inicio" type="submit">Iniciar Sesión</button>
+        <section id="Formulario">
+            <h1>Iniciar Sesión</h1>
+            <input v-model="email" class="botones" type="text" placeholder="Ingrese su correo" id="boxcorreo">
 
-      <label class="bottom"><input type="checkbox" name="Check" id="checkbox"> Recordarme</label>
+            <input v-model="password" class="botones" type="password" placeholder="Ingrese su contraseña"
+                id="boxcontra">
 
-     <a href="/new/user" class="bottom a links" id="link">¿Necesitas ayuda?</a> 
-     <br><br>
-  
-     <label class="pie">¿Primera vez en Netflix?</label> 
-     <routter-link to="/new/user">
-         <a href="/new/user" class="pie a links" id="link2">Subscribete Ahora</a> 
-     </routter-link>
-     
-     <br><br>
-     <p class="pie">
-      Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. 
-      <a href="google.com" class="links" id=link3>Más info.</a> 
-     </p>
-  </section>
-  
-  </Div>
+            <button @click="handleLogin()" class="botones" id="inicio" type="submit">Iniciar Sesión</button>
+
+            <label class="bottom"><input type="checkbox" name="Check" id="checkbox"> Recordarme</label>
+
+            <a href="/new/user" class="bottom a links" id="link">¿Necesitas ayuda?</a>
+            <br><br>
+
+            <label class="pie">¿Primera vez en Netflix?</label>
+            <routter-link to="/new/user">
+                <a href="/new/user" class="pie a links" id="link2">Subscribete Ahora</a>
+            </routter-link>
+
+            <br><br>
+            <p class="pie">
+                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.
+                <a href="google.com" class="links" id=link3>Más info.</a>
+            </p>
+        </section>
+
+    </Div>
 </template>
 
 <script setup lang="ts">
@@ -44,41 +45,42 @@ const email = ref<string>('');
 const password = ref<string>('');
 
 const handleLogin = (): void => {
-  if (!login(email.value, password.value, router)) {
-    show_alerta('Ingrese Credenciales Validas','error');
-  }else if (login(email.value, password.value, router)) {
-    show_alerta('Bienvenido','success');
-    console.log(currentUser.value);
-  }
+    if (!login(email.value, password.value, router)) {
+        show_alerta('Ingrese Credenciales Validas', 'error');
+    } else if (login(email.value, password.value, router)) {
+        show_alerta('Bienvenido', 'success');
+        console.log(currentUser.value);
+    }
 
 };
 
 </script>
 
 <style>
-*{
+* {
     margin: 0px;
 }
 
-body{   
+body {
     height: 100vh;
     background-image: url(../../assets/fondo.jpg);
 
 }
-#Cuadrado{
+
+#Cuadrado {
     height: 100vh;
 }
 
-div{
+div {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.logoHeader{
-padding-left: 10px;
-height: 14vh;
+.logoHeader {
+    padding-left: 10px;
+    height: 14vh;
 }
 
-section{
+section {
     height: 85vh;
     width: 58vh;
     color: aliceblue;
@@ -90,59 +92,67 @@ section{
     margin-bottom: 20px;
 
 }
-h1{
+
+h1 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-.botones{
+.botones {
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
     font-size: 1rem;
-    margin-bottom: 15px; 
-    background-color: rgba(65, 64, 64,0.7);
+    margin-bottom: 15px;
+    background-color: rgba(65, 64, 64, 0.7);
     border-radius: 5px;
     border-width: 0;
     color: rgb(209, 209, 209);
 }
 
-#inicio{
+#inicio {
     margin-top: 20px;
     margin-bottom: 35px;
     background-color: rgb(192, 0, 0);
     font-weight: bold;
 }
-#inicio:hover{
+
+#inicio:hover {
     background-color: red;
     cursor: pointer;
 }
-.a{
+
+.a {
     padding-left: 20%;
 }
-#checkbox{
+
+#checkbox {
     padding-right: 40%;
 }
-.bottom{
-    color:rgb(97, 97, 97) ;
+
+.bottom {
+    color: rgb(97, 97, 97);
     font-size: 15px;
 }
-.pie{
-    color:rgb(97, 97, 97) ;
+
+.pie {
+    color: rgb(97, 97, 97);
     font-size: 15px;
     padding-bottom: 10px;
 }
-#link2{
+
+#link2 {
     padding-left: 5%;
 
 }
-#link3{
+
+#link3 {
     color: blue;
 
 }
-.links{
+
+.links {
     text-decoration: none;
 }
-
 </style>

@@ -1,4 +1,4 @@
-interface Profile {
+export interface Profile {
     nombre: string;
     apellido: string;
     perfil: string;
