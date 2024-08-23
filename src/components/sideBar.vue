@@ -23,11 +23,11 @@
       </div>
     </router-link>
     
-    <!-- Foto de perfil con logout -->
-    <div id="iconoSideBar" class="py-2 mx-10 my-7">
-      <img :src="`/src/assets/${selectedProfile.perfil}`" alt="Perfil" class="h-10 w-10 rounded-full cursor-pointer" @click="logout"
-      />
-    </div>
+    <router-link to="/profiles">
+      <div id="iconoSideBar" class="py-2 mx-10 my-7">
+        <img :src="`/src/assets/${selectedProfile.perfil}`" alt="Perfil" class="h-10 w-10 rounded-full cursor-pointer" @click="logout"/>
+      </div>
+    </router-link>
   </div>
 </template>
 

@@ -1,5 +1,8 @@
 <template>
   <div class="w-full h-screen bg-black flex flex-col items-center justify-center text-white">
+    <router-link to="/" class="absolute top-0 right-0 m-4">
+      <button class="text-white">Logout</button>
+    </router-link>
     <h1 class="text-3xl mb-15">Who's watching?</h1>
     <div class="flex space-x-8">
       <router-link to="/home" v-for="profile in getProfilesCurrentUser()" :key="profile.nombre" class="flex justify-center">

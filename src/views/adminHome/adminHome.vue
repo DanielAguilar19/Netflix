@@ -1,5 +1,8 @@
 <template>
     <div class="p-10 w-full h-screen bg-black text-white flex flex-col justify-center items-center">
+      <router-link to="/" class="absolute top-0 right-0 m-4">
+      <button class="text-white">Logout</button>
+    </router-link>
       <h1 class="text-4xl mb-6">Bienvenido Administrador</h1>
       <p class="text-xl mb-12">Seleccione que tipo de contenido a trabajar</p>
       <div class="flex justify-center space-x-6 mb-12">
