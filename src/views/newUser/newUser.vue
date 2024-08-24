@@ -2,7 +2,7 @@
     <div class="w-full h-screen bg-black flex flex-col items-center justify-center text-white">
         <form @submit.prevent="handleSubmit" class="block bg-gray-950 p-8 rounded-lg shadow-lg w-[35vw] h-[85vh] overflow-y-scroll">
             <router-link to="/">
-                <Button class="flex justify-self-start" icon="pi-chevron-left" severity="secondary" rounded aria-label="Filter" />
+                <Button class="flex justify-self-start" icon="left" severity="secondary" rounded aria-label="Filter" />
             </router-link>
             <h1 class="text-3xl text-white font-bold mb-6 text-center">Nuevo Usuario</h1>
   

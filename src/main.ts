@@ -13,7 +13,7 @@ import Aura from '@primevue/themes/aura';
 import router from './Router/index.js';
 import VueSweetalert2 from 'vue-sweetalert2';
 import App from './App.vue';
-
+    
 const app = createApp(App);
 const pinia = createPinia();
 

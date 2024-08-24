@@ -1,9 +1,10 @@
 <template>
   <div>
-    <!-- Otros íconos -->
-    <div id="iconoSideBar" class="py-2 mx-10 my-7">
-      <Magnify fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
-    </div>
+    <router-link to ="/search">
+      <div id="iconoSideBar" class="py-2 mx-10 my-7">
+        <Magnify fillColor="#FFFFFF" :size="40" class="cursor-pointer" />
+      </div>
+    </router-link>
     <router-link to="/home">
       <div id="iconoSideBar" class="py-2 mx-10 my-7">
         <HomeOutline fillColor="#FFFFFF" :size="40" class="cursor-pointer" />

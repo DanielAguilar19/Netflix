@@ -12,6 +12,13 @@ import AdminHome from '../views/adminHome/adminHome.vue';
 import adminOperationMovie from '../views/adminOperation/adminOperationMovie.vue';
 import adminOperationSerie from '../views/adminOperation/adminOperationSerie.vue';
 import adminOperationUser from '../views/adminOperation/adminOperationUser.vue';
+import CreateUser from '../views/createOne/createUser.vue';
+import EditUser from '../views/editOne/editUser.vue';
+import CreatePelicula from '../views/createOne/createPelicula.vue';
+import EditPelicula from '../views/editOne/editPelicula.vue';
+import CreateSerie from '../views/createOne/createSerie.vue';
+import EditSerie from '../views/editOne/editSerie.vue';
+import Search from '../views/search/search.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -93,6 +100,69 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {path: '/admin/operation/user', name: 'adminUser', component: adminOperationUser  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/search', name: 'buscador', component: Search  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/crear/usuario', name: 'crearUsuario', component: CreateUser  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/editar/usuario', name: 'editarUsuario', component: EditUser  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/crear/pelicula', name: 'crearPelicula', component: CreatePelicula  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/editar/pelicula', name: 'editarPelicula', component: EditPelicula  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/crear/serie', name: 'crearSerie', component: CreateSerie  ,
+    beforeEnter: (to, from, next) => {
+      if (isAuthenticated()) {
+        next();
+      } else {
+        next('/');
+      }
+    },
+  },
+  {path: '/editar/serie', name: 'editarSerie', component: EditSerie  ,
     beforeEnter: (to, from, next) => {
       if (isAuthenticated()) {
         next();

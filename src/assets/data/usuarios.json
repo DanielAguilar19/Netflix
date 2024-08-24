@@ -20,5 +20,18 @@
       "email": "admin@hola.com",
       "password": "admin",
       "role": "admin"
+    },
+    {
+      "email": "daniel@hola.com",
+      "password": "daniel",
+      "role": "subscriber",
+      "profiles": [
+        {
+          "nombre": "Daniel",
+          "apellido": "Aguilar",
+          "perfil": "Avatar_3.png"
+        }
+
+      ]
     }
   ]

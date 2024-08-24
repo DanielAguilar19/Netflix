@@ -3,11 +3,11 @@
       <h1 class="text-4xl mb-6">Operaciones para Peliculas</h1>
       <p class="text-xl mb-12">Seleccione que acción desea realizar</p>
       <div class="flex justify-center space-x-8 mb-12">
-        <router-link to="/admin/operation/movies" class="bg-gray-950 p-7 rounded-lg flex flex-col items-center w-55">
+        <router-link to="/crear/pelicula" class="bg-gray-950 p-7 rounded-lg flex flex-col items-center w-55">
           <img class="h-16 w-16 mb-4" src="../../assets/iconos/create-svgrepo-com.svg" alt=""/>
           <p class="text-xl">Crear Pelicula</p>
         </router-link>
-        <router-link to="/admin/operation/series" class="bg-gray-950 p-7 rounded-lg flex flex-col items-center w-55">
+        <router-link to="/editar/pelicula" class="bg-gray-950 p-7 rounded-lg flex flex-col items-center w-55">
           <img class="h-16 w-16 mb-4" src="../../assets/iconos/edit-svgrepo-com.svg" alt=""/>
           <p class="text-xl">Editar Pelicula</p>
         </router-link>
